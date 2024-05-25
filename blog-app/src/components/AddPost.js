@@ -15,7 +15,7 @@ function AddPost() {
       const user = JSON.parse(atob(token.split('.')[1])); // Decoding the token to get the user data
       const { id: authorId } = user;
       await axios.post(
-        'http://localhost:5000/api/posts',
+        'https://blog-back-wmi5.onrender.com/api/posts',
         { title, content, authorId },
         { headers: { Authorization: `Bearer ${token}` } }
       );

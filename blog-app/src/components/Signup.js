@@ -10,7 +10,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:5000/api/signup', { username, password });
+      await axios.post('https://blog-back-wmi5.onrender.com/api/signup', { username, password });
       setUsername('');
       setPassword('');
       setError('');

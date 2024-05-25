@@ -10,7 +10,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', { username, password });
+      const response = await axios.post('https://blog-back-wmi5.onrender.com/api/login', { username, password });
       const token=response.data.token
       console.log('Token:', token);
       localStorage.setItem('token', token);

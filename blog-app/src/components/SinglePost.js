@@ -16,7 +16,7 @@ function SinglePost() {
 
   const fetchPost = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/posts/${id}`);
+      const response = await axios.get(`https://blog-back-wmi5.onrender.com/api/posts/${id}`);
       setPost(response.data);
       setEditedTitle(response.data.title);
       setEditedContent(response.data.content);
