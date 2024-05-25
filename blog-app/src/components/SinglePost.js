@@ -33,7 +33,7 @@ function SinglePost() {
     try {
       const token = localStorage.getItem('token');
       await axios.patch(
-        `http://localhost:5000/api/posts/${id}`,
+        `https://blog-front-h5xl.onrender.com/api/posts/${id}`,
         { title: editedTitle, content: editedContent },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -48,7 +48,7 @@ function SinglePost() {
   const handleDeletePost = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+      await axios.delete(`https://blog-front-h5xl.onrender.com/api/posts/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
