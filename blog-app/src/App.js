@@ -13,7 +13,7 @@ function App() {
     localStorage.removeItem('token');
     setLoggedIn(false);
     // Redirect to login page after logout
-    window.location.href = '/login';
+    return <Navigate to="/login" replace />;
   };
 
   return (
