@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { Navigate } from 'react-router-dom';
 function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -15,7 +15,7 @@ function Signup() {
       setPassword('');
       setError('');
       // Redirect to login page after successful signup
-      window.location.href = '/login';
+      return <Navigate to="/login" replace />;
     } catch (error) {
       setError('Failed to sign up');
     }
